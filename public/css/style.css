@@ -1,0 +1,245 @@
+@import 'layout.css';
+@import 'general.css';
+
+/* ==================================== Login Page ==================================== */
+
+.auth-pages {
+  background-color: var(--primary-light);
+}
+
+.auth-pages .form-wrapper {
+  box-shadow: var(--shadow-md);
+  border-radius: 0 40px 40px 0;
+}
+
+.image-wrapper {
+  border-radius: 40px 0 0 40px;
+}
+
+
+/* ==================================== Dashboard Page ==================================== */
+.dashboard-widgets {
+  border-radius: var(--rounded-md);
+}
+
+.dashboard-widget-card-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.dashboard-widget-card-icon i.bx.bx-group {
+  font-size: 40px;
+}
+
+.custom-widgets-cards:nth-child(1) .dashboard-widgets {
+  background-color: #c8facd;
+
+}
+
+.custom-widgets-cards:nth-child(1) .dashboard-widget-card-icon {
+  background: linear-gradient(135deg, rgba(0, 171, 85, 0) 0%, rgba(0, 171, 85, 0.24) 97.35%);
+}
+
+
+.custom-widgets-cards:nth-child(2) .dashboard-widgets {
+  background-color: #CAFDF5;
+}
+
+.custom-widgets-cards:nth-child(2) .dashboard-widget-card-icon {
+  background: linear-gradient(135deg, rgba(0, 184, 217, 0) 0%, rgba(0, 184, 217, 0.24) 97.35%);
+}
+
+
+/* ==================================== Profile Page ==================================== */
+.card-listing li span:last-child {
+  font-weight: 600;
+}
+
+.card-listing li span:first-child {
+  color: var(--secondary-2);
+}
+
+
+
+/* ==================================== Change Password ==================================== */
+.change-password-form i {
+  color: var(--secondary-1);
+}
+
+/* ==================================== Staff ==================================== */
+.role-chips span {
+  padding: 4px 8px;
+  border-radius: var(--rounded);
+  background-color: var(--primary);
+}
+
+/* ==================================== FAQ ==================================== */
+.faq-action-icons {
+  position: absolute;
+  margin: auto;
+  top: -5px;
+  bottom: 0;
+  right: 15px;
+  z-index: 9;
+}
+
+/* ==================================== Product Module ==================================== */
+.product-card {
+  border-radius: var(--rounded-md);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  background: var(--white);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.product-card-image {
+  height: clamp(200px, 250px, 250px);
+}
+
+
+.product-card .product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--rounded);
+}
+
+
+.upload-file-wrapper {
+  background-color: var(--white);
+  border: 1px dashed var(--border-color);
+  position: relative;
+  border-radius: var(--rounded);
+}
+
+.upload-file-wrapper .supported-file-box,
+.upload-file-wrapper .upload-file-box {
+  flex: 1 1;
+  width: 50%;
+}
+
+.upload-file-wrapper .upload-file-box {
+  border-right: 1px solid var(--border-color);
+}
+
+
+.upload-file-wrapper .upload-file-box .upload-button-box {
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.upload-file-wrapper .supported-file-box span {
+  border: 1px solid var(--border-color);
+  border-radius: var(--rounded);
+}
+
+.upload-file-wrapper .upload-file-box input[type=file] {
+  position: relative;
+  z-index: 99;
+}
+
+.visibility-wrapper {
+  background-color: var(--primary-light-2);
+  border-radius: var(--rounded-md);
+}
+
+.visible-tag {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rounded);
+  background-color: var(--primary);
+}
+
+
+.product-image-wrapper {
+  background: var(--white);
+  border: 1px solid var(--bg-light);
+  border-radius: var(--rounded);
+  flex: 0 1 23%;
+  padding: 10px;
+  height: 47%;
+}
+
+.product-cover-wrapper {
+  border: 1px solid var(--bg-light);
+  border-radius: var(--rounded);
+  height: 240px;
+  position: relative;
+  cursor: pointer;
+}
+
+.product-cover-wrapper::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: var(--rounded);
+  transition: all 0.1s ease-in-out;
+  visibility: hidden;
+}
+
+.delete-cover-image {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: all 0.1s ease-in-out;
+  visibility: hidden;
+}
+
+.product-cover-wrapper:hover::before,
+.product-cover-wrapper:hover .delete-cover-image {
+  transition: all 0.1s ease-in-out;
+  visibility: visible;
+}
+
+.cover-image-upload {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  margin-inline: auto;
+  display: none;
+  justify-content: center;
+
+}
+
+.product-cover-wrapper:hover .cover-image-upload {
+  display: flex;
+}
+
+.product-cover-wrapper img {
+  border-radius: var(--rounded-md);
+}
+
+.product-cover-wrapper img,
+.product-image-wrapper img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+/* ==================================== Responsive ==================================== */
+@media all and (max-width: 991px) {
+  .auth-pages .form-wrapper {
+    border-radius: 40px;
+  }
+}

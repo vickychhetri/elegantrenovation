@@ -1,0 +1,179 @@
+@import 'general.css';
+
+/* ====================================Layout CSS====================================*/
+body,
+html {
+  height: 100%;
+}
+
+.main-layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* ====================================Layout CSS====================================*/
+
+.sidebar {
+  position: fixed;
+  width: 270px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  border-right: 1px solid var(--border-color);
+  padding: 24px 20px;
+  overflow-y: scroll;
+}
+
+.sidebar.collaspe {
+  left: -270px;
+  transition: all 0.3s ease-in-out;
+}
+
+.user-detail-wrapper {
+  background-color: var(--bg-light);
+  border-radius: var(--rounded-sm);
+}
+
+.menu-bar li {
+  padding: 10px 16px;
+  border-radius: var(--rounded-sm);
+}
+
+.menu-bar li span,
+.menu-bar li i {
+  color: var(--secondary-2);
+  font-weight: 500;
+}
+
+.menu-bar .accordion-body li {
+  padding-block: 5px;
+}
+
+
+.menu-bar .accordion-body li a {
+  color: var(--secondary-2);
+  font-weight: 500;
+
+}
+
+.menu-active {
+  background-color: var(--primary-light-2);
+}
+
+
+.menu-bar li:hover * {
+  color: var(--primary);
+}
+
+.inactive-sublink,
+.active-sublink {
+  position: relative;
+}
+
+.inactive-sublink::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -20px;
+  bottom: 0;
+  margin-block: auto;
+  width: 6px;
+  height: 6px;
+  background-color: var(--secondary-2);
+  border-radius: 50%;
+}
+
+.active-sublink::before {
+  background-color: var(--black);
+  width: 8px;
+  height: 8px;
+}
+
+.menu-active span,
+.menu-active i {
+  color: var(--primary) !important;
+}
+
+/* ==================================== Header CSS ====================================*/
+
+.header-page-footer {
+  width: calc(100% - 270px);
+  margin-left: 270px;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+}
+
+header {
+  background-color: var(--white);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+
+.header-page-footer.expand {
+  width: 100%;
+  margin-left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* ==================================== Section CSS ====================================*/
+section {
+  padding: 32px 24px;
+}
+
+/* ==================================== Footer CSS ====================================*/
+footer {
+  margin-top: auto;
+  background-color: var(--white);
+  border-top: 1px solid var(--border-color);
+}
+
+#shadow-host-companion {
+  padding: 0 !important;
+}
+
+/* ==================================== Footer CSS ====================================*/
+@media all and (max-width:767px) {
+  section {
+    padding: 20px 8px;
+  }
+
+  .sidebar {
+    width: 80px;
+    padding: 24px 10px;
+  }
+
+  .header-page-footer {
+    width: calc(100% - 80px);
+    margin-left: 80px;
+  }
+
+  .menu-bar li {
+    padding: 10px 10px;
+    display: inline-flex;
+  }
+
+  .menu-bar .accordion-body li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 30px;
+  }
+
+  .menu-bar .accordion-body {
+    padding-left: 0;
+  }
+
+  .p-xs-0 {
+    padding: 0 !important;
+  }
+}

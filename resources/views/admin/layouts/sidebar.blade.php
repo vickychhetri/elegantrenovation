@@ -1,0 +1,2 @@
+<x-Admin.Layout.Sidebar/>
+
