@@ -4,6 +4,7 @@
 /public/original
 /public/thumbnail
 /public/storage
+/storage/logs
 /storage/*.key
 /vendor
 .env
